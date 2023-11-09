@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1699518756 source:c:\users\elli\documents\yliopisto\2. vuosi\2023-2024\1.-2. periodi\ohjelmoinnin tekniikka c\osa 2\bittiesityksen_luku\bitit.c
+1699520170 source:c:\users\elli\documents\yliopisto\2. vuosi\2023-2024\1.-2. periodi\ohjelmoinnin tekniikka c\osa 2\bittiesityksen_luku\bitit.c
 	"bitit.h"
+	<stdio.h>
 
 1699518587 c:\users\elli\documents\yliopisto\2. vuosi\2023-2024\1.-2. periodi\ohjelmoinnin tekniikka c\osa 2\bittiesityksen_luku\bitit.h
 
-1699518756 source:c:\users\elli\documents\yliopisto\2. vuosi\2023-2024\1.-2. periodi\ohjelmoinnin tekniikka c\osa 2\bittiesityksen_luku\main.c
+1699519788 source:c:\users\elli\documents\yliopisto\2. vuosi\2023-2024\1.-2. periodi\ohjelmoinnin tekniikka c\osa 2\bittiesityksen_luku\main.c
 	<stdio.h>
 	<stdlib.h>
 	"bitit.h"
