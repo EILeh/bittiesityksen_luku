@@ -4,8 +4,10 @@
 
 int main(int argc, char *argv[])
 {
-    short int x;
+    int x;
     signed char schar_x;
+    long int xLong;
+    xLong = atoi(argv[1]);
 
     x = atoi(argv[1]);
 
@@ -25,7 +27,7 @@ int main(int argc, char *argv[])
 
     printf("\n");
 
-    longBitit(x);
+    longBitit(xLong);
 
 
     return 0;

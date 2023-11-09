@@ -10,4 +10,4 @@ void intBitit(int x);
 
 void longBitit(long int x);
 
-#endif // BITIT_H_INCLUDED
+#endif

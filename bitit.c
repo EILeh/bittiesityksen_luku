@@ -6,13 +6,16 @@ void scharBitit(signed char x)
 {
 
     signed char y;
-    y = x%256;
-    printf("%d\n", y);
-    int bit;
+
+    signed char bit;
     int i;
     int zeroBits;
     int oneBits;
 
+    zeroBits = 0;
+    oneBits = 0;
+    y = x%256;
+    printf("%d\n", y);
     for (i = CHAR_BIT - 1; i >= 0; i--)
     {
         bit = (x >> i) & 1;
@@ -20,8 +23,7 @@ void scharBitit(signed char x)
     }
     printf("\n");
 
-    zeroBits = 0;
-    oneBits = 0;
+
     for (i = 0; i < CHAR_BIT; i++)
     {
         if ((x >> i) & 1)
@@ -45,12 +47,15 @@ void shortBitit(short int x)
 {
 
 
-    printf("%d\n", x);
-    int bit;
+
+    short int bit;
     int i;
     int zeroBits;
     int oneBits;
+    zeroBits = 0;
+    oneBits = 0;
 
+    printf("%d\n", x);
     for (i = sizeof(short int)*CHAR_BIT - 1; i >= 0; i--)
     {
         bit = (x >> i) & 1;
@@ -58,8 +63,7 @@ void shortBitit(short int x)
     }
     printf("\n");
 
-    zeroBits = 0;
-    oneBits = 0;
+
     for (i = 0; i < sizeof(short int)*CHAR_BIT; i++)
     {
         if ((x >> i) & 1)
@@ -78,11 +82,68 @@ void shortBitit(short int x)
 void intBitit(int x)
 {
 
-    return;
+
+    int bit;
+    int i;
+    int zeroBits;
+    int oneBits;
+    zeroBits = 0;
+    oneBits = 0;
+    printf("%d\n", x);
+
+    for (i = sizeof(int)*CHAR_BIT - 1; i >= 0; i--)
+    {
+        bit = (x >> i) & 1;
+        printf("%d", bit);
+    }
+    printf("\n");
+
+
+    for (i = 0; i < sizeof(int)*CHAR_BIT; i++)
+    {
+        if ((x >> i) & 1)
+        {
+            oneBits++;
+        }
+        else
+        {
+            zeroBits++;
+        }
+    }
+    printf("%d\n", zeroBits);
+    printf("%d\n", oneBits);
 }
 
 void longBitit(long int x)
 {
 
-    return;
+
+    long int bit;
+    int i;
+    int zeroBits;
+    int oneBits;
+    zeroBits = 0;
+    oneBits = 0;
+    printf("%ld\n", x);
+    for (i = sizeof(long int)*CHAR_BIT - 1; i >= 0; i--)
+    {
+        bit = (x >> i) & 1;
+        printf("%ld", bit);
+    }
+    printf("\n");
+
+
+    for (i = 0; i < sizeof(long int)*CHAR_BIT; i++)
+    {
+        if ((x >> i) & 1)
+        {
+            oneBits++;
+        }
+        else
+        {
+            zeroBits++;
+        }
+    }
+    printf("%d\n", zeroBits);
+    printf("%d\n", oneBits);
 }
