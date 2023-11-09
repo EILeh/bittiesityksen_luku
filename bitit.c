@@ -1,29 +1,42 @@
 #include "bitit.h"
 #include <stdio.h>
-#include <stdio.h>
+#include <limits.h>
 
 void scharBitit(signed char x)
 {
-    int num;
-    int bin;
-    int rem;
-    int place;
 
-    num = (signed char)x;
-    bin = 0;
-    rem = 0;
-    place = 1;
+    signed char y;
+    y = x%256;
+    printf("%d\n", y);
+    int bit;
+    int i;
+    int zeroBits;
+    int oneBits;
 
-    while (num)
+    for (i = CHAR_BIT - 1; i >= 0; i--)
     {
-        rem = num % 2;
-        num = num/2;
-
-        bin = bin + (rem * place);
-        place = place * 10;
+        bit = (x >> i) & 1;
+        printf("%d", bit);
     }
+    printf("\n");
 
-    printf("%d", bin);
+    zeroBits = 0;
+    oneBits = 0;
+    for (i = 0; i < CHAR_BIT; i++)
+    {
+        if ((x >> i) & 1)
+        {
+            oneBits++;
+        }
+        else
+        {
+            zeroBits++;
+        }
+    }
+    printf("%d\n", zeroBits);
+    printf("%d\n", oneBits);
+
+
 
 
 }
@@ -31,7 +44,26 @@ void scharBitit(signed char x)
 void shortBitit(short int x)
 {
 
-    return;
+    int num;
+    int bin;
+    int rem;
+    int place;
+
+    /*num = (signed char)x;*/
+    bin = 0;
+    rem = 0;
+    place = 1;
+
+    while (x)
+    {
+        rem = x % 2;
+        x = x/2;
+
+        bin = bin + (rem * place);
+        place = place * 10;
+    }
+
+    printf("%d", bin);
 }
 
 void intBitit(int x)

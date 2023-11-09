@@ -4,33 +4,28 @@
 
 int main(int argc, char *argv[])
 {
-    int x;
+    short int x;
     signed char schar_x;
 
     x = atoi(argv[1]);
 
-    schar_x = argv[1];
+    schar_x = x;
 
-    printf("%d\n", x);
+/*    printf("%d\n", x);*/
 
     scharBitit(schar_x);
 
-
-
-
-
+    printf("\n");
 
     shortBitit(x);
 
-
+    printf("\n");
 
     intBitit(x);
 
-
-
+    printf("\n");
 
     longBitit(x);
-
 
 
     return 0;
